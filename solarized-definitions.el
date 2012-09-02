@@ -327,14 +327,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              ;; table
              (table-cell ((t (,@fmt-none ,@fg-base0 ,@bg-back))))
              ;; outline - pandocBlockQuoteLeader*
-             (outline-1 ((t (,@fmt-none ,@fg-blue))))
-             (outline-2 ((t (,@fmt-none ,@fg-cyan))))
+             (outline-1 ((t (,@fmt-none ,@fg-red))))
+             (outline-2 ((t (,@fmt-none ,@fg-orange))))
              (outline-3 ((t (,@fmt-none ,@fg-yellow))))
-             (outline-4 ((t (,@fmt-none ,@fg-red))))
-             (outline-5 ((t (,@fmt-none ,@fg-base0))))
-             (outline-6 ((t (,@fmt-none ,@fg-base01))))
-             (outline-7 ((t (,@fmt-none ,@fg-orange))))
-             (outline-8 ((t (,@fmt-none ,@fg-violet))))
+             (outline-4 ((t (,@fmt-none ,@fg-cyan))))
+             (outline-5 ((t (,@fmt-none ,@fg-violet))))
+             (outline-6 ((t (,@fmt-none ,@fg-blue))))
+             (outline-7 ((t (,@fmt-none ,@fg-base0))))
+             (outline-8 ((t (,@fmt-none ,@fg-base01))))
              ;; speedbar
              (speedbar-button-face ((t (,@fmt-none ,@fg-base1))))
              (speedbar-directory-face ((t (,@fmt-none ,@fg-orange))))
@@ -381,38 +381,39 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              ;; gnus - these are taken from mutt, not VIM
              (gnus-cite-1 ((t (,@fmt-none ,@fg-blue)))) ; quoted
              (gnus-cite-2 ((t (,@fmt-none ,@fg-cyan)))) ; quoted1
-             (gnus-cite-3 ((t (,@fmt-none ,@fg-yellow)))) ; quoted2
-             (gnus-cite-4 ((t (,@fmt-none ,@fg-red)))) ; quoted3
+             (gnus-cite-3 ((t (,@fmt-none ,@fg-violet)))) ; quoted2
+             (gnus-cite-4 ((t (,@fmt-none ,@fg-yellow)))) ; quoted3
              (gnus-cite-5 ((t (,@fmt-none ,@fg-orange)))) ; quoted4
-             (gnus-cite-6 ((t (,@fmt-none ,@fg-violet))))
+             (gnus-cite-6 ((t (,@fmt-none ,@fg-red))))
              (gnus-cite-7 ((t (,@fmt-none ,@fg-green))))
              (gnus-cite-8 ((t (,@fmt-none ,@fg-magenta))))
              (gnus-cite-9 ((t (,@fmt-none ,@fg-base00))))
              (gnus-cite-10 ((t (,@fmt-none ,@fg-base01))))
              (gnus-cite-11 ((t (,@fmt-none ,@fg-base02))))
-             (gnus-group-mail-1 ((t (,@fmt-bold ,@fg-base3))))
-             (gnus-group-mail-1-empty ((t (,@fg-base3))))
-             (gnus-group-mail-2 ((t (,@fmt-bold ,@fg-base2))))
-             (gnus-group-mail-2-empty ((t (,@fg-base2))))
-             (gnus-group-mail-3 ((t (,@fmt-bold ,@fg-magenta))))
-             (gnus-group-mail-3-empty ((t (,@fg-magenta))))
-             (gnus-group-mail-low ((t (,@fmt-bold ,@fg-base00))))
-             (gnus-group-mail-low-empty ((t (,@fg-base00))))
+	     ;; I want the damned colors in the Group buffer
+             (gnus-group-mail-1 ((t (,@fmt-bold ,@fg-magenta))))
+             (gnus-group-mail-1-empty ((t (,@fg-magenta))))
+             (gnus-group-mail-2 ((t (,@fmt-bold ,@fg-red))))
+             (gnus-group-mail-2-empty ((t (,@fg-red))))
+             (gnus-group-mail-3 ((t (,@fmt-bold ,@fg-orange))))
+             (gnus-group-mail-3-empty ((t (,@fg-orange))))
+             (gnus-group-mail-low ((t (,@fmt-bold ,@fg-violet))))
+             (gnus-group-mail-low-empty ((t (,@fg-violet))))
              (gnus-group-news-1 ((t (,@fmt-bold ,@fg-base1))))
              (gnus-group-news-1-empty ((t (,@fg-base1))))
-             (gnus-group-news-2 ((t (,@fmt-bold ,@fg-blue))))
-             (gnus-group-news-2-empty ((t (,@fg-blue))))
-             (gnus-group-news-low ((t (,@fmt-bold ,@fg-violet))))
-             (gnus-group-news-low-empty ((t (,@fg-violet))))
+             (gnus-group-news-2 ((t (,@fmt-bold ,@fg-base2))))
+             (gnus-group-news-2-empty ((t (,@fg-base2))))
+             (gnus-group-news-low ((t (,@fmt-bold ,@fg-base3))))
+             (gnus-group-news-low-empty ((t (,@fg-base3))))
              (gnus-emphasis-highlight-words ; highlight
               ((t (,@fmt-none ,fg-yellow))))
-             (gnus-header-content ((t (,@fmt-none ,@fg-base01)))) ; hdrdefault
-             (gnus-header-from ((t (,@fmt-none ,@fg-base00)))) ; header ^From
-             (gnus-header-name ((t (,@fmt-none ,@fg-base01)))) ; hdrdefault
+             (gnus-header-content ((t (,@fmt-none ,@fg-green)))) ; hdrdefault
+             (gnus-header-from ((t (,@fmt-none ,@fg-green)))) ; header ^From
+             (gnus-header-name ((t (,@fmt-none ,@fg-green)))) ; hdrdefault
              (gnus-header-newsgroups ; hdrdefault
-              ((t (,@fmt-none ,@fg-base02))))
+              ((t (,@fmt-none ,@fg-green))))
              (gnus-header-subject ; header ^Subject
-              ((t (,@fmt-none ,@fg-blue))))
+              ((t (,@fmt-bold ,@fg-cyan))))
              (gnus-server-agent ((t (,@fmt-bold ,@fg-base3))))
              (gnus-server-closed ((t (,@fmt-ital ,@fg-base1))))
              (gnus-server-denied ((t (,@fmt-bold ,@fg-base2))))
@@ -443,16 +444,16 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (gnus-summary-low-undownloaded
               ((t (,@fmt-ital :inherit gnus-summary-normal-ancient))))
              (gnus-summary-normal-ancient ; old messages
-              ((t (,@fmt-none ,@fg-blue))))
+              ((t (,@fmt-none ,@fg-cyan))))
              (gnus-summary-normal-read ; read messages
               ((t (,@fmt-none ,@fg-base01))))
              (gnus-summary-normal-ticked ; flagged
               ((t (,@fmt-none ,@fg-red))))
              (gnus-summary-normal-undownloaded ((t (,@fmt-none ,@fg-base2))))
              (gnus-summary-normal-unread ; unread messages
-              ((t (,@fmt-none ,@fg-blue))))
+              ((t (,@fmt-none ,@fg-green))))
              (gnus-summary-selected ; indicator
-              ((t (,@fmt-none ,@fg-base03 ,@bg-yellow))))
+              ((t (,@fmt-none ,@fg-base03 ,@bg-green))))
              ;; Message
              (message-mml ((t (,@fg-blue))))
              (message-cited-text ((t (,@fg-base2))))
